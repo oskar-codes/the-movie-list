@@ -56,7 +56,7 @@ const resultsContainer = document.querySelector('.results');
   }
   const library = rawValue.split(',');
   for (movie of library) {
-    const movieData = await makeRequest('GET', `http://www.omdbapi.com/?apikey=${API_KEY}&i=${movie}`);
+    const movieData = await makeRequest('GET', `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movie}`);
     Vue.set(app.library, movie, JSON.parse(movieData));
   }
 })();
@@ -64,7 +64,7 @@ const resultsContainer = document.querySelector('.results');
 searchBar.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     const request = new XMLHttpRequest();
-    request.open('GET', `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchBar.value}`);
+    request.open('GET', `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchBar.value}`);
     request.send();
     
     request.addEventListener('load', (e) => {
@@ -85,7 +85,7 @@ async function loadEachMovie() {
   if (!app.searchResults || app.searchResults.length === 0) return;
 
   for (result of app.searchResults) {
-    const movieData = await makeRequest('GET', `http://www.omdbapi.com/?apikey=${API_KEY}&i=${result.imdbID}`);
+    const movieData = await makeRequest('GET', `https://www.omdbapi.com/?apikey=${API_KEY}&i=${result.imdbID}`);
     const movie = app.searchResults.find((e => e.imdbID === result.imdbID ));
     Vue.set(movie, 'specificData', JSON.parse(movieData));
   }
