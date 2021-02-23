@@ -106,7 +106,7 @@ main.no-scroll {
 }
 
 .movie .back {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
   position: absolute;
   top: 0;
   width: 100%;
@@ -244,5 +244,8 @@ main.no-scroll {
   .icon-btn {
     position: static;
     width: calc(100% - 20px);
+  }
+  main {
+    width: 95vw;
   }
 }
