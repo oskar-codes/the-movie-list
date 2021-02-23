@@ -106,7 +106,7 @@ main.no-scroll {
 }
 
 .movie .back {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
   position: absolute;
   top: 0;
   width: 100%;
