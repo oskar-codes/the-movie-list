@@ -245,4 +245,7 @@ main.no-scroll {
     position: static;
     width: calc(100% - 20px);
   }
+  main {
+    width: 95vw;
+  }
 }
