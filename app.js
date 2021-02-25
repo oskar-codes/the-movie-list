@@ -120,8 +120,6 @@ function displayMovie(event) {
     const background = document.querySelector('.background');
     background.classList.add('background-active');
     event.currentTarget.classList.add('selected-movie');
-
-    console.log('opened');
   }
 }
 
@@ -129,10 +127,8 @@ function closeMovie() {
   const background = document.querySelector('.background');
   const selected = document.querySelector('.selected-movie');
 
-  selected.classList.remove('selected-movie');
+  selected?.classList.remove('selected-movie');
   background.classList.remove('background-active');
-
-  console.log('closed');
 }
 
 (() => {

@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  background-color: rgb(1, 1, 29);
+  background-color: #181b23;
   overflow-y: hidden;
 }
 
@@ -62,6 +62,7 @@ main.no-scroll {
   cursor: pointer;
   transition: all 0.3s ease;
   perspective: 1000px;
+  min-height: 200px;
 }
 
 .movie:not(.selected-movie):hover {
@@ -105,10 +106,15 @@ main.no-scroll {
   backface-visibility: hidden;
 }
 
+.movie .front > h3 {
+  margin: 10px auto;
+}
+
 .movie .back {
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   background: #262b35;
   padding: 10px;
